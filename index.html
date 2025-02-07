@@ -3,200 +3,130 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kartik Kapse - Personal Webpage</title>
+    <title>Kartik Kapse - Portfolio</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #e0f7fa;
-            color: #004d66;
-        }
-        header {
-            background-color: #00796b;
-            color: white;
-            padding: 20px;
+        body { font-family: 'Arial', sans-serif; }
+        .banner {
+            background: url("C:\Users\karti\Downloads\289369-neural-networks-the-theoretical-understanding-being-data-scientist.jpg") no-repeat center center/cover;
+            height: 50vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             text-align: center;
+            position: relative;
         }
-        nav {
-            background-color: #004d66;
-            overflow: hidden;
-        }
-        nav a {
-            float: left;
-            display: block;
-            color: white;
-            text-align: center;
-            padding: 14px 20px;
-            text-decoration: none;
-        }
-        nav a:hover {
-            background-color: #00695c;
-        }
-        section {
-            padding: 20px;
-            margin: 20px;
-        }
-        h2 {
-            color: #00796b;
-        }
-        footer {
-            background-color: #004d66;
-            color: white;
-            text-align: center;
-            padding: 10px;
-            position: fixed;
+        .banner-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
             width: 100%;
-            bottom: 0;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+        }
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 4px solid white;
+            margin-top: -75px;
+            position: relative;
+            z-index: 10;
         }
     </style>
 </head>
-<body>
-    <header>
-        <h1>Kartik Kapse</h1>
-        <p>Hackenschwaige 9, 85051 Ingolstadt | Phone: +49 0155 6012 4546 | Email: <a href="mailto:kartik.b.kapse@gmail.com" style="color: rgb(255,255,255);"target="_blank"> kartik.b.kapse@gmail.com</a></p>
-        <p><a href="https://linkedin.com/in/kartik-kapse" style="color: white;"target="_blank">LinkedIn Profile</a></p>
+<body class="bg-gray-900 text-white">
+    <header class="relative w-full">
+        <img src="C:\Users\karti\Downloads\289369-neural-networks-the-theoretical-understanding-being-data-scientist.jpg" alt="AI Technology Banner" class="w-full h-96 object-cover">
+        <div class="absolute inset-0 bg-black bg-opacity-50 flex flex-col items-center justify-center">
+            <h1 class="text-4xl font-bold text-white">Kartik Kapse</h1>
+            <p class="text-lg text-gray-300"> AI Engineering | Autonomous Systems | Data Science</p>
+        </div>
     </header>
-
-    <nav>
-        <a href="#about">About Me</a>
-        <a href="#education">Education</a>
-        <a href="#experience">Work Experience</a>
-        <a href="#skills">Skills</a>
-        <a href="#Certifications">Certifications</a>
-        <a href="#contact">Contact</a>
-    </nav>
-
-    <section id="about">
-        <h2>About Me</h2>
-        <p>Welcome! I am Kartik Kapse, an AI Engineering student specializing in Autonomous Systems at Technische Hochschule Ingolstadt, Germany. I have a strong background in Electrical Engineering, coupled with hands-on experience in SCADA system operations, and a passion for machine learning algorithms. I am enthusiastic about leveraging my skills to solve complex problems in the automotive and AI domains.</p>
-    </section>
-
-    <section id="education">
-        <h2>Education</h2>
-        <ul>
-            <li><strong>Master of Engineering in AI Engineering of Autonomous Systems</strong> - Technische Hochschule Ingolstadt, Germany (03.2024 – current)
-                <ul>
-                    <li>Intelligent Perception and Exploration</li>
-                    <li>Planning, Control and Decision-Making</li>
-                    <li>Software Methods and System Development</li>
-                </ul>
-            </li>
-            <li><strong>Bachelor of Engineering in Electrical Engineering</strong> - Savitribai Phule Pune University, India (05.2018 – 05.2022)</li>
-            <li><strong>Higher Secondary Education (Science)</strong> - KRT Arts, BH Commerce & AM Science College, India (03.2016 – 03.2018)</li>
-        </ul>
-    </section>
-
-    <section id="experience">
-        <h2>Work Experience</h2>
-        <ul>
-            <li><strong>Sr. Executive – System Control Operations (SCADA)</strong> - Adani Electricity Mumbai Limited, India (06.2022 – 08.2023)
-                <ul>
-                    <li>Managed SCADA operations, outage management, and protection systems to ensure reliable power supply.</li>
-                    <li>Coordinated with departments to manage High Tension (HT) outages and maintain records for reliability indices.</li>
-                </ul>
-            </li>
-            <li><strong>Graduate Engineer Trainee</strong> - Adani Electricity Mumbai Limited, India (06.2022 – 08.2023)
-                <ul>
-                    <li>Gained experience in electrical distribution systems, switchgear operations, and maintenance.</li>
-                    <li>Developed strong analytical and problem-solving skills for predictive maintenance.</li>
-                </ul>
-            </li>
-            <li><strong>Intern (Design & Development)</strong> - ABB Limited, Nashik, India (06.2021 – 08.2021)
-                <ul>
-                    <li>Worked on SCADA development, AC-DC systems, and PID controllers.</li>
-                    <li>Designed wiring schematics, single-line diagrams, and I/O panels under various standards.</li>
-                </ul>
-            </li>
-        </ul>
-    </section>
-
-    <section id="projects">
-        <h2>Academic Projects</h2>
-        <ul>
-            <li><strong>Digit Recognition Using CNN and MLP Models on MNIST Dataset</strong> (03.2024 – 07.2024)
-                <ul>
-                    <li>Developed a digit recognizer using a CNN trained on the MNIST dataset, transitioning from NumPy to PyTorch, for efficient and accurate digit classification.</li>
-                </ul>
-            </li>
-            <li><strong>VFTO Analysis of 245kV Gas Insulated Substation</strong> at CG Power and Industrial Solutions Limited, Nashik, India (08.2021 – 04.2022)
-                <ul>
-                    <li>Analyzed VFTOs generated in a 245 kV GIS, simulating disconnector and circuit breaker operations using PSCAD-EMTDC for equivalent circuit modeling.</li>
-                </ul>
-            </li>
-            <li><strong>Project on “FORMULA STUDENT ELECTRIC VEHICLE”</strong> (09.2020 – 02.2022)
-                <ul>
-                    <li>Developed a highly safe and efficient Formula Student Electric Vehicle with a focus on cost and performance optimization.</li>
-                    <li>Gained insights into Li-ion battery pack manufacturing and implemented advanced safety systems.</li>
-                    <li>Conducted performance testing and collaborated with team members to integrate subsystems into the final design.</li>
-                </ul>
-            </li>
-            <li><strong>Seminar on “SAFETY SYSTEMS INCORPORATED IN ELECTRIC RACING VEHICLES”</strong> (07.2021 – 11.2021)
-                <ul>
-                    <li>Designed innovative safety systems for electric racing vehicles using analog circuits and ECU programming.</li>
-                    <li>Performed Failure Mode Effect Analysis (FMEA) to ensure comprehensive safety and reliability.</li>
-                </ul>
-            </li>
-        </ul>
-    </section>
     
-    <section id="Certifications">
-        <h2>Certificates and Achievements</h2>
-        <div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="45f4f7cb-0a7b-4fea-8519-bcafe512a47d" data-share-badge-host="https://www.credly.com"></div>
-        <script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>
-        <div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="51e10b42-a94b-4722-bf01-e94b06611f31" data-share-badge-host="https://www.credly.com"></div>
-        <script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>
-        <div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="eb9abc51-7ecd-4a87-9bb2-df10dcc75ded" data-share-badge-host="https://www.credly.com"></div>
-        <script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>
-        <div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="8fecd01e-c310-4073-bccd-535fc9bb9e20" data-share-badge-host="https://www.credly.com"></div>
-        <script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>
-        <ul>
-            <li><strong><a href="https://courses.skillsbuild.skillsnetwork.site/certificates/2d243173c7064f59b06f9e9f17437e06" style="color: rgb(0, 77, 102);"target="_blank">Data Analysis with Python</a></strong></li>
-            <li><strong><a href="https://courses.skillsbuild.skillsnetwork.site/certificates/c02cfdfb1dc84987b0fbf95fea984359" style="color: rgb(0, 77, 102);"target="_blank">Python 101 for Data Science</a></strong></li>
-            <li><strong><a href="https://www.coursera.org/account/accomplishments/certificate/F4YD89QBDX8W" style="color: rgb(0, 77, 102);"target="_blank">Introduction to Programming with MATLAB</a></strong></li>
-            <li><strong><a href="https://matlabacademy.mathworks.com/progress/share/certificate.html?id=7d5e5e37-669c-41bf-9665-1a774e86defe&" style="color: rgb(0, 77, 102);"target="_blank">MATLAB Fundamentals</a></strong></li>
-            <li><strong><a href="https://matlabacademy.mathworks.com/progress/share/learningpath/certificate.html?id=663c2f81-9ae5-4be8-9e88-137021512366&" style="color: rgb(0, 77, 102);"target="_blank">Core MATLAB Skills</a></strong></strong></li>
-            <li><strong><a href="https://www.coursera.org/account/accomplishments/certificate/NWH8UM7ED6UQ" style="color: rgb(0, 77, 102);"target="_blank">Programming for Everybody (Getting Started with Python)</a></strong></strong></li>
-            <li><strong><a href="https://www.coursera.org/account/accomplishments/certificate/Z7GBE4VDWPBR" style="color: rgb(0, 77, 102);"target="_blank">Electric Power Systems</a></strong></strong></strong></li>
-            <li><strong><a href="https://www.udemy.com/certificate/UC-f6148f4e-6f6a-41f3-800d-17ed46b199c5/" style="color: rgb(0, 77, 102);"target="_blank">Making an Open Source Drone</a></strong></li>
-            <li><strong><a href="https://matlabacademy.mathworks.com/progress/share/certificate.html?id=7ea580b6-a732-4402-b873-4b50a6086b58&" style="color: rgb(0, 77, 102);"target="_blank">MATLAB Onramp</a></strong></li>
-            <li><strong><a href="https://matlabacademy.mathworks.com/progress/share/certificate.html?id=da3f0905-aa4c-4ad5-b4f5-9aff68d123f4&" style="color: rgb(0, 77, 102);"target="_blank">Simulink Onramp</a></strong></li>
-            <li><strong><a href="https://drive.google.com/file/d/1k4wXWJ7fkBKieyhOh4Qmtv91iRKfZC6R/view?usp=sharing" style="color: rgb(0, 77, 102);"target="_blank">Formula Green by ISNEE Motorsports</a></strong></li>
-            <li><strong><a href="https://drive.google.com/file/d/1-1npfV28Qb17tvhl2yDHguQobAAjDSX9/view?usp=sharing" style="color: rgb(0, 77, 102);"target="_blank">Formula Student EV Concept Challenge[FSEV 2020]</a></strong></li>
-            <li><strong><a href="https://drive.google.com/file/d/1Rh-LaQPIi_UvgCxG-lQD_pSxI8W6Sbgu/view?usp=sharing" style="color: rgb(0, 77, 102);"target="_blank">Energy Efficiency with Building Automation Systems I</a></strong></li>
-            <li><strong><a href="https://drive.google.com/file/d/13AW73DHXjy5C8_cnk6gn8ai9oT54dFap/view?usp=sharing" style="color: rgb(0, 77, 102);"target="_blank">Energy Efficiency Fundamentals</a></strong></li>
-            <li><strong><a href="https://drive.google.com/file/d/1_B9NYRWs4Uut9PX_TEkcaFh-RGLctXXH/view?usp=sharing" style="color: rgb(0, 77, 102);"target="_blank">Boiler Types and Opportunities for Energy Efficiency</a></strong></li>
-            <li><strong><a href="https://drive.google.com/file/d/1JupBQQ05e1BWSk1kE20_3tgXlbi0E1-u/view?usp=sharing" style="color: rgb(0, 77, 102);"target="_blank">German as Foreign Language - Goethe Zertifikat</a></strong></li>
-            <li><strong><a href="https://drive.google.com/file/d/1Fi69noxSvUSuGhxSaUaKiDr6QWY5tBg6/view?usp=sharing" style="color: rgb(0, 77, 102);"target="_blank">MATLAB based EV Design 2019</a></strong></li>
-            <li><strong><a href="https://drive.google.com/file/d/1OPa9DRE_wtVdUd-ThnP_wRe9E8_2rVTu/view?usp=sharing" style="color: rgb(0, 77, 102);"target="_blank">Electric Vehicle Design using MATLAB</a></strong></li>
-            <li><strong><a href="https://drive.google.com/file/d/1pQZGG6QEECx5UfzqNSOfoRTJ6ji7jDrW/view?usp=sharing" style="color: rgb(0, 77, 102);"target="_blank">Embedded Systems- ARM7 & ARM Cortex</a></strong></li>
-            <li><strong><a href="http://hbrppublication.com/OJS/index.php/JRAEE/article/view/2534" style="color: rgb(0, 77, 102);"target="_blank">"VFTO Analysis On 245kV GIS" - Bachelor's Project Publication</a></strong></li>
-        </ul>
-        </ul>
-    </section>
-
-
-    <section id="skills">
-        <h2>Skills</h2>
-        <ul>
-            <li><strong>Key Skills:</strong> Reinforcement Learning, Neural Networks, MLP, Automotive Systems, Teamwork, Problem Solving, Critical Thinking.</li>
-            <li><strong>Digital Skills:</strong> Python, MATLAB, C, C++, SCADA ABB WS-500, MS Office Applications (Excel, PowerPoint, Word, Outlook).</li>
-            <li><strong>Languages:</strong> English (Fluent), German (Intermediate)</li>
-            <li><strong>Certifications:</strong> Programming with MATLAB, Electric Power Systems, Making an Open Source Drone.</li>
-        </ul>
-    </section>
-
-    <section id="contact">
-        <h2>Contact Me</h2>
-        <p>If you'd like to get in touch, feel free to reach out via email or phone. I'm always open to discussing new opportunities, collaborations, or simply connecting with like-minded professionals.</p>
-        <p><strong>Email:</strong><a href="mailto:kartik.b.kapse@gmail.com" style="color: rgb(0, 77, 102);"target="_blank"> kartik.b.kapse@gmail.com</a></p>
-        <p><strong>Phone:</strong>+49 0155 6012 4546</p>
-    </section>
-
-    <div style="height: 50px;"></div>
-
-    <footer>
-        <p>&copy; 2024 Kartik Kapse. All rights reserved.</p>
+    <div class="flex justify-center">
+        <img src="C:\Users\karti\OneDrive\Desktop\profile.jpg.jpeg" alt="Profile Image" class="profile-img">
+    </div>
+    
+    <main class="max-w-4xl mx-auto py-10">
+        <section class="mb-8">
+            <h2 class="text-2xl font-semibold border-b-2 border-blue-500 pb-2">About Me</h2>
+            <p class="mt-4 text-gray-300">Master’s student specializing in AI Engineering for Autonomous Systems at TH Ingolstadt. Passionate about Data Science, Machine Learning, and Robotics.</p>
+        </section>
+        
+        <section class="mb-8 hidden-section">
+            <h2 class="text-2xl font-semibold border-b-2 border-blue-500 pb-2">Experience</h2>
+            <ul class="mt-4 text-gray-300">
+                <li><strong>🔹Sr. Executive – System Control Operations (SCADA)</strong> - Adani Electricity Mumbai Limited, India (06.2022 – 08.2023)
+                    <ul>
+                        <li>Managed SCADA operations, outage management, and protection systems to ensure reliable power supply.</li>
+                        <li>Coordinated with departments to manage High Tension (HT) outages and maintain records for reliability indices.</li>
+                    </ul>
+                </li>
+                <li><strong>🔹Graduate Engineer Trainee</strong> - Adani Electricity Mumbai Limited, India (06.2022 – 08.2023)
+                    <ul>
+                        <li>Gained experience in electrical distribution systems, switchgear operations, and maintenance.</li>
+                        <li>Developed strong analytical and problem-solving skills for predictive maintenance.</li>
+                    </ul>
+                </li>
+                <li><strong>🔹Intern (Design & Development)</strong> - ABB Limited, Nashik, India (06.2021 – 08.2021)
+                    <ul>
+                        <li>Worked on SCADA development, AC-DC systems, and PID controllers.</li>
+                        <li>Designed wiring schematics, single-line diagrams, and I/O panels under various standards.</li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+        
+        <section class="mb-8 hidden-section">
+            <h2 class="text-2xl font-semibold border-b-2 border-blue-500 pb-2">Skills</h2>
+            <div class="grid grid-cols-2 gap-4 mt-4">
+                <span class="bg-gray-700 p-2 rounded">Machine Learning</span>
+                <span class="bg-gray-700 p-2 rounded">Deep Learning</span>
+                <span class="bg-gray-700 p-2 rounded">Data Science</span>
+                <span class="bg-gray-700 p-2 rounded">Python, PyTorch</span>
+                <span class="bg-gray-700 p-2 rounded">Cloud Computing</span>
+                <span class="bg-gray-700 p-2 rounded">Autonomous Systems</span>
+            </div>
+        </section>
+        
+        <section class="mb-8 hidden-section">
+            <h2 class="text-2xl font-semibold border-b-2 border-blue-500 pb-2">Projects</h2>
+            <div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="45f4f7cb-0a7b-4fea-8519-bcafe512a47d" data-share-badge-host="https://www.credly.com"></div>
+            <script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>
+            <div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="51e10b42-a94b-4722-bf01-e94b06611f31" data-share-badge-host="https://www.credly.com"></div>
+            <script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>
+            <div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="eb9abc51-7ecd-4a87-9bb2-df10dcc75ded" data-share-badge-host="https://www.credly.com"></div>
+            <script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>
+            <div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="8fecd01e-c310-4073-bccd-535fc9bb9e20" data-share-badge-host="https://www.credly.com"></div>
+            <script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>
+            <p class="mt-4 text-gray-300">🔹Developing an Autonomous Driving Agent in MetaDrive using PPO</p>
+            <p class="mt-4 text-gray-300">🔹End-to-End Learning vs. Modular Architectures: Comparative Insights into Autonomous Driving Systems (Paper under submission)</p>
+            <p class="mt-4 text-gray-300">🔹Digit Recognition Using CNN and MLP Models on MNIST Dataset</p>
+            <p class="mt-4 text-gray-300">🔹VFTO Analysis of 245kV Gas Insulated Substation @ CG Power and Industrial Solutions Limited, Nashik, India</p>
+            <p class="mt-4 text-gray-300">🔹Project on “FORMULA STUDENT ELECTRIC VEHICLE”</p>
+            <p class="mt-4 text-gray-300">🔹Seminar on “SAFETY SYSTEMS INCORPORATED IN ELECTRIC RACING VEHICLES”</p>
+        </section>
+    </main>
+    
+    <footer class="text-center py-6 bg-gray-800 hidden-section">
+        <p class="text-gray-400">Connect with me on <a href="https://www.linkedin.com/in/kartik-kapse/" class="text-blue-400">LinkedIn</a> | <a href="https://github.com/Beingkbk" class="text-blue-400">GitHub</a></p>
     </footer>
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const sections = document.querySelectorAll(".hidden-section");
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("visible-section");
+                    }
+                });
+            }, { threshold: 0.2 });
+            
+            sections.forEach(section => observer.observe(section));
+        });
+    </script>
 </body>
 </html>
